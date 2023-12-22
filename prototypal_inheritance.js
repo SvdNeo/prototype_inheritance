@@ -74,7 +74,7 @@ let animal1 = {
     jumps: false
   };
   let rabbit1 = {
-    __proto__: animal,
+    __proto__: animal1,
     jumps: true
   };
   
@@ -88,7 +88,7 @@ let animal1 = {
   
   console.log( rabbit1.jumps ); // undefined
 
-  //task2
+  //task2 Searching algorithm
   let head = {
     glasses: 1
   };
@@ -108,5 +108,27 @@ let animal1 = {
     money: 2000,
     __proto__:bed
   };
-  console.log(pockets.glasses)
+  console.log(pockets.glasses)// modern js engines are built in such a way that it will consume same amt of time irrespective from where they are accessed
 
+  //TASK4
+  let hamster = {
+    stomach: [],
+  
+    eat(food) {
+      this.stomach.push(food);
+    }
+  };
+  
+  let speedy = {
+    __proto__: hamster,
+    stomach: [],
+  };
+  
+  let lazy = {
+    __proto__: hamster,
+    stomach: [],
+  };
+  
+lazy.eat("apple")
+console.log(lazy.stomach)
+console.log(speedy.stomach)
