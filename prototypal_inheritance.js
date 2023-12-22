@@ -69,3 +69,22 @@ for(let i in rabbit){
     }
 }
 
+//task1 
+let animal1 = {
+    jumps: false
+  };
+  let rabbit1 = {
+    __proto__: animal,
+    jumps: true
+  };
+  
+  console.log( rabbit1.jumps ); // true
+  
+  delete rabbit1.jumps;
+  
+  console.log( rabbit1.jumps ); //undefined
+  
+  delete animal1.jumps;
+  
+  console.log( rabbit1.jumps ); // undefined
+
